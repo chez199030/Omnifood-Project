@@ -30,6 +30,11 @@
 
 */
 
+html {
+  /* 10px / 16px = 0.625 = 62.5% */
+  font-size: 62.5%;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -37,8 +42,15 @@
 }
 
 body {
+  font-size: 12px;
   font-family: sans-serif;
   line-height: 1;
   font-weight: 400;
   color: #555;
+}
+
+.test {
+  background-color: red;
+  padding: 100px;
+  max-width: 50rem;
 }
