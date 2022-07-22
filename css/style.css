@@ -49,8 +49,13 @@ body {
   color: #555;
 }
 
-.test {
-  background-color: red;
-  padding: 100px;
-  max-width: 50rem;
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 130rem;
+  margin: 0 auto;
+}
+
+.hero-img {
+  width: 100%;
 }
