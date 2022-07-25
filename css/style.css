@@ -48,10 +48,10 @@ body {
   font-weight: 400;
   color: #555;
 }
-.section-hero {
-  background-color: #fdf2e9;
-  padding: 9.6rem 0;
-}
+
+/* **************************** */
+/* GENERAL REUSABLE COMPONENTS */
+/* **************************** */
 
 .heading-primary {
   font-size: 5.2rem;
@@ -62,20 +62,6 @@ body {
   margin-bottom: 3.2rem;
 }
 
-.hero-description {
-  font-size: 2rem;
-  line-height: 1.6;
-  margin-bottom: 4.8rem;
-}
-
-.hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 9.6rem;
-  max-width: 130rem;
-  margin: 0 auto;
-  align-items: center;
-}
 .btn:link,
 .btn:visited {
   text-decoration: none;
@@ -116,6 +102,50 @@ body {
 
 .margin--right-sm {
   margin-right: 1.6rem !important;
+}
+
+/* **************************** */
+/* HEADER */
+/* **************************** */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fdf2e9;
+
+  /* To create sticky effect */
+  height: 9.6rem;
+  padding: 0 4.8rem;
+}
+
+.logo {
+  height: 2.2rem;
+}
+
+/* **************************** */
+/* HERO SECTION */
+/* **************************** */
+
+.section-hero {
+  background-color: #fdf2e9;
+  padding: 4.8rem 0 9.6rem 0;
+}
+
+.hero-description {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
+}
+
+.hero {
+  display: grid;
+  padding: 0 3.2rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 9.6rem;
+  max-width: 130rem;
+  margin: 0 auto;
+  align-items: center;
 }
 
 .hero-img {
