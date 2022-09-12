@@ -1,19 +1,9 @@
-//
+//NOTE:Set current year in Copyright
 const copyrightYear = document.querySelector(".copyright-year");
-// console.log(myName);
-// console.log(h1);
-
-// h1.addEventListener("click", function () {
-//   h1.textContent = myName;
-//   h1.style.backgroundColor = "red";
-//   h1.style.padding = "5rem";
-// });
-
-// Set current year in Copyright
 const currentDate = new Date().getFullYear();
 copyrightYear.textContent = currentDate;
 
-//Open Mobile Nav
+//NOTE:Open Mobile Nav
 const btnNavEl = document.querySelector(".btn-mobile-nav");
 const headerEl = document.querySelector(".header");
 
@@ -21,8 +11,35 @@ btnNavEl.addEventListener("click", function () {
   headerEl.classList.toggle("nav-open");
 });
 
+//NOTE:Smooth scrolling animation
+const allLinks = document.querySelectorAll("a:link");
+
+allLinks.forEach(function (link) {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+    const href = link.getAttribute("href");
+    // console.log(href);
+    //No. 1 Scroll back to top.
+    //This don't work in Firefox, Edge, Safari to fix use thix  https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js and save it in HTML
+    if (href === "#")
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    //Scroll down smooth to those have an Id.
+    if (href !== "#" && href.startsWith("#")) {
+      const sectionEl = document.querySelector(href);
+      sectionEl.scrollIntoView({ behavior: "smooth" });
+    }
+    //Close mobile nav
+    if (link.classList.contains("main-nav-link")) {
+      headerEl.classList.toggle("nav-open");
+    }
+  });
+});
+
 ///////////////////////////////////////////////////////////
-// Fixing flexbox gap property missing in some Safari versions
+//NOTE: Fixing flexbox gap property missing in some Safari versions
 function checkFlexGap() {
   var flex = document.createElement("div");
   flex.style.display = "flex";
