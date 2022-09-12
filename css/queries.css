@@ -116,6 +116,8 @@ Instead 1rem = 1em = 16px
   }
   .btn-mobile-nav {
     display: block;
+    /* Added Z-index for focus state */
+    z-index: 9999;
   }
   .main-nav {
     background-color: rgba(255, 255, 255, 0.97);

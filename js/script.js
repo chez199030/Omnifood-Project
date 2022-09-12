@@ -9,8 +9,17 @@ const copyrightYear = document.querySelector(".copyright-year");
 //   h1.style.padding = "5rem";
 // });
 
+// Set current year in Copyright
 const currentDate = new Date().getFullYear();
 copyrightYear.textContent = currentDate;
+
+//Open Mobile Nav
+const btnNavEl = document.querySelector(".btn-mobile-nav");
+const headerEl = document.querySelector(".header");
+
+btnNavEl.addEventListener("click", function () {
+  headerEl.classList.toggle("nav-open");
+});
 
 ///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
